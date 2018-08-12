@@ -1,3 +1,7 @@
 ---
-- import_tasks: package.yml
+- include_role:
+    name: package
+  vars:
+    packages:
+      - screen
 - import_tasks: screen.yml
