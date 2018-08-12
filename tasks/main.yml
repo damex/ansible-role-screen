@@ -1,7 +1,4 @@
 ---
 - include_role:
     name: package
-  vars:
-    packages:
-      - screen
 - import_tasks: screen.yml
