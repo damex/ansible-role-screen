@@ -1,0 +1,8 @@
+---
+- name: ensure screen package
+  include_role:
+    name: "damex.package"
+  vars:
+    package_packages:
+      - name: "{{ screen_package_name }}"
+        state: "{{ screen_package_state }}"

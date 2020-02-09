@@ -1,6 +1,0 @@
----
-- name: ensure screen system-wide configuration is correct
-  template:
-    src: "screenrc.j2"
-    dest: "/etc/screenrc"
-  become: true

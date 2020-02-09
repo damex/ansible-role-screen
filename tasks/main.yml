@@ -1,7 +1,7 @@
 ---
-- include_role:
-    name: package
-  vars:
-    packages:
-      - screen
-- import_tasks: screen.yml
+- name: ensure screen
+  block:
+    - import_tasks: package.yml
+    - import_tasks: configuration.yml
+  tags:
+    - screen
