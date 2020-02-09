@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/damex/ansible-role-screen.svg?branch=master)](https://travis-ci.org/damex/ansible-role-screen)
 
-The screen role is designed to be used with Debian distributive.
+The screen role is designed to be used with Debian and CentOS distributives.
 
 `Ansible Galaxy` users can add screen role using the following command:
 
