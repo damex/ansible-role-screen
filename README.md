@@ -1,6 +1,6 @@
 # ansible screen role
 
-[![Build Status](https://travis-ci.org/damex/ansible-role-screen.svg?branch=master)](https://travis-ci.org/damex/ansible-role-screen)
+[![Build Status](https://travis-ci.com/damex/ansible-role-screen.svg?branch=master)](https://travis-ci.com/damex/ansible-role-screen)
 
 The screen role is designed to be used with Debian and CentOS distributives.
 
