@@ -5,4 +5,5 @@
   vars:
     package_packages:
       - name: "{{ screen_package_name }}"
+        version: "{{ screen_package_version }}"
         state: "{{ screen_package_state }}"

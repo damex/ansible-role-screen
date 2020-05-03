@@ -1,5 +1,6 @@
 ---
 screen_package_name: "screen"
+screen_package_version: ""
 screen_package_state: "present"
 screen_conf_file: "/etc/screenrc"
 screen_startup_message: "off"
