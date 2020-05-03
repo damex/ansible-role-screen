@@ -3,6 +3,26 @@ screen_package_name: "screen"
 screen_package_version: ""
 screen_package_state: "present"
 screen_conf_file: "/etc/screenrc"
-screen_startup_message: "off"
-screen_hardstatus: "off"
-screen_defscrollback: "10240"
+screen_autodetach: true
+screen_bind:
+  - key: c
+    command: screen 1
+  - key: ^c
+    command: screen 1
+  - key: 0
+    command: select 10
+screen_caption_display: "always"
+screen_caption: "{{ '%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s ' }}"
+screen_defscrollback: 10240
+screen_defutf8: true
+screen_hardstatus: false
+screen_screen:
+  - options: ""
+    number: 1
+    command: ""
+screen_screen_command: ""
+screen_startup_message: false
+screen_utf8: true
+screen_verbose: false
+screen_wrap: true
+screen_zombie_timeout: 5
