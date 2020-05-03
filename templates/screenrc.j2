@@ -1,12 +1,19 @@
 # {{ ansible_managed }}
 
-startup_message {{ screen_startup_message }}
-hardstatus {{ screen_hardstatus }}
-caption always {{ '\'%{= dg} %H %{G}| %{B}%l %{G}|%=%?%{d}%-w%?%{r}(%{d}%n %t%? {%u} %?%{r})%{d}%?%+w%?%=%{G}| %{B}%M %d %c:%s \'' }}
-defutf8 on
-utf8 on on
+autodetach {{ 'on' if screen_autodetach else 'off' }}
+{% for bind in screen_bind %}
+bind {{ bind.key }} {{ bind.command }}
+{% endfor %}
+caption {{ screen_caption_display }}
+caption string '{{ screen_caption }}'
 defscrollback {{ screen_defscrollback }}
-bind c screen 1
-bind ^c screen 1
-bind 0 select 10
-screen 1
+defutf8 {{ 'on' if screen_defutf8 else 'off' }}
+hardstatus {{ 'on' if screen_hardstatus else 'off' }}
+{% for screen in screen_screen %}
+screen {{ screen.options }} {{ screen.number }} {{ screen.command }}
+{% endfor %}
+startup_message {{ 'on' if screen_startup_message else 'off' }}
+utf8 {{ 'on on' if screen_utf8 else 'off off' }}
+verbose {{ 'on' if screen_verbose else 'off' }}
+wrap {{ 'on' if screen_wrap else 'off' }}
+zombie_timeout {{ screen_zombie_timeout }}
